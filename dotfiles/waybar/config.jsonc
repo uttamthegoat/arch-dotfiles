@@ -1,0 +1,105 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 40,
+    "modules-left": ["custom/arch", "hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["clock", "mpris"],
+    "modules-right": ["group/hardware", "tray"],
+    
+    "group/hardware": {
+        "orientation": "horizontal",
+        "modules": [
+            "network",
+            "cpu",
+            "memory",
+            "backlight",
+            "wireplumber",
+            "battery"
+        ]
+    },
+    "mpris": {
+        "format": "󰎆 {artist} - {title}",
+        "format-paused": "󰏤 {artist} - {title}",
+        "max-length": 40,
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous"
+    },
+    
+    "custom/arch": {
+        "format": " 󰣇 ", // This is the Arch icon from Nerd Fonts
+        "tooltip": false,
+        "on-click": "sh -c 'which rofi > /dev/null && rofi -show drun || pkill rofi'" 
+        // Optional: The line above makes the logo open a menu if you have 'rofi' installed
+    },
+    
+	"hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "active-only": false,
+        "on-click": "activate",
+        "persistent-workspaces": {
+            "*": 9 // This ensures workspaces 1-9 are always visible on all monitors
+        },
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "urgent": "",
+            "active": "",
+            "default": ""
+        }
+    },
+    "hyprland/window": {
+        "format": "󰣇 {}"
+    },
+
+    "clock": {
+        "format": " {:%H:%M  󰃭 %d/%m}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+	"wireplumber": {
+    	"format": "{icon} {volume}%",
+    	"format-muted": "󰝟",
+    	"on-click": "pavucontrol",
+    	"on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+",
+    	"on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-",
+    	"format-icons": ["", " ", "  "],
+    	"max-volume": 100,
+    	"scroll-step": 1
+	},
+
+	"network": {
+        "format-wifi": "  {essid}",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰤮",
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "tooltip-format-wifi": "Signal: {signalStrength}%",
+        "on-click": "kitty -e nmtui" // Change 'kitty' to your terminal
+    },
+
+    "battery": {
+        "states": { "warning": 30, "critical": 15 },
+        "format": "{icon}  {capacity}%",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "on-scroll-up": "brightnessctl set 1%+",
+        "on-scroll-down": "brightnessctl set 1%-"
+    },
+}

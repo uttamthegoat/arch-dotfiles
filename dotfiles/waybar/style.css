@@ -1,0 +1,105 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+}
+
+window#waybar {
+    background-color: rgba(26, 27, 38, 0); /* Fully transparent bar background */
+    color: #c0caf5;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+#workspaces {
+    background-color: rgba(26, 27, 38, 0.85);
+    margin: 5px;
+    padding: 0px 5px;
+    border-radius: 12px;
+}
+
+#workspaces button {
+    padding: 0px 8px;
+    color: rgba(192, 224, 245, 0.4); /* Dimmer color for empty/inactive workspaces */
+    background-color: transparent;
+    /* transition: all 0.3s ease; */
+}
+
+#workspaces button.active {
+    color: #bb9af7;
+    background-color: rgba(187, 154, 247, 0.15); /* Soft glow behind active number */
+    border-radius: 8px;
+}
+
+#workspaces button.urgent {
+    color: #f7768e;
+}
+
+#workspaces button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #7aa2f7;
+    border-radius: 8px;
+}
+
+/* Color accents for specific modules */
+#clock {
+    color: #7aa2f7;
+    font-weight: bold;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f7768e;
+    color: #1a1b26;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* The Main Container for the Right Side */
+hardware {
+    background-color: rgba(26, 27, 38, 0.85);
+    margin: 5px;
+    padding: 0px 10px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Individual spacing inside the pill */
+#network, #cpu, #memory, #backlight, #pulseaudio, #battery {
+    padding: 0 8px;
+    background: transparent; /* Remove individual backgrounds */
+    border: none;
+}
+
+/* Media Player Styling (Center) */
+#mpris {
+    background-color: rgba(26, 27, 38, 0.85);
+    color: #bb9af7;
+    margin: 5px;
+    padding: 0 15px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+/* Clock (Separated for focus) */
+#clock {
+    background-color: rgba(26, 27, 38, 0.85);
+    color: #7aa2f7;
+    margin: 5px;
+    padding: 0 15px;
+    border-radius: 15px;
+}
+
+/* Accents */
+#backlight { color: #ff9e64; }
+#wireplumber { color: #ff9e64; }
+#network { color: #b4f9f8; }
+
+/* Desktop title styling */
+#window {
+    background: transparent;
+    border: none;
+}

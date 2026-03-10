@@ -1,0 +1,6 @@
+.config/fastfetch
+.config/hypr
+.config/kitty
+.config/quickshell
+.config/waybar
+.config/wlogout
