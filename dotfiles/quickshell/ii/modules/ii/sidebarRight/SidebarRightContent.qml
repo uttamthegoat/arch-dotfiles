@@ -53,9 +53,9 @@ Item {
         anchors.fill: parent
         implicitHeight: parent.height - Appearance.sizes.hyprlandGapsOut * 2
         implicitWidth: sidebarWidth - Appearance.sizes.hyprlandGapsOut * 2
-        color: Appearance.colors.colLayer0
+        color: "transparent"
         border.width: 1
-        border.color: Appearance.colors.colLayer0Border
+        border.color: Appearance.customColors.custColRightSidebarBG
         radius: Appearance.rounding.screenRounding - Appearance.sizes.hyprlandGapsOut + 1
 
         ColumnLayout {

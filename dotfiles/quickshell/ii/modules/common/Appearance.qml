@@ -7,6 +7,7 @@ pragma ComponentBehavior: Bound
 Singleton {
     id: root
     property QtObject m3colors
+    property QtObject customColors
     property QtObject animation
     property QtObject animationCurves
     property QtObject colors
@@ -106,6 +107,11 @@ Singleton {
         property color term13: "#B2416B"
         property color term14: "#8D76AD"
         property color term15: "#221A1A"
+
+    }
+
+    customColors: QtObject {
+        property color custColRightSidebarBG: "#000000d3"
     }
 
     colors: QtObject {
