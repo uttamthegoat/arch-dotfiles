@@ -111,7 +111,19 @@ Singleton {
     }
 
     customColors: QtObject {
-        property color custColRightSidebarBG: "#000000d3"
+        // Right Sidebar Colors
+        property color custColRightSidebarBG: Qt.rgba(0.1, 0.1, 0.1, 0.5)
+        property color custColRightSidebarBorder: Qt.rgba(0.1, 0.1, 0.1, 0.5)
+
+        // Left Sidebar Colors
+        property color custColLeftSidebarBG: Qt.rgba(0.1, 0.1, 0.1, 0.5)
+        property color custColLeftSidebarBorder: Qt.rgba(0.1, 0.1, 0.1, 0.5)
+
+        property color custColBtnBG: "#232323ca"
+        
+        // StyledPopup widget colors
+        property color custColStyledPopupBG: Qt.rgba(0.1, 0.1, 0.1, 0.3)
+        property color custColStyledPopupBorder: Qt.rgba(0.1, 0.1, 0.1, 0.5)
     }
 
     colors: QtObject {
