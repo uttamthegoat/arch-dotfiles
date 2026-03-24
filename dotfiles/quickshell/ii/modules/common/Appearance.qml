@@ -124,6 +124,15 @@ Singleton {
         // StyledPopup widget colors
         property color custColStyledPopupBG: Qt.rgba(0.1, 0.1, 0.1, 0.3)
         property color custColStyledPopupBorder: Qt.rgba(0.1, 0.1, 0.1, 0.5)
+
+        // Cheatsheet widget colors
+        property color custColCheatsheetBG: Qt.rgba(0.1, 0.1, 0.1, 0.3)
+        property color custColCheatsheetBorder: Qt.rgba(0.1, 0.1, 0.1, 0.5)
+
+        // Vertical Bar colors
+        property color custColVertBarBG: Qt.rgba(0.1, 0.1, 0.1, 0.7)
+        property color custColVertBarBorder: Qt.rgba(0.1, 0.1, 0.1, 0.5)
+
     }
 
     colors: QtObject {

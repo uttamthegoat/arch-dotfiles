@@ -74,9 +74,9 @@ Scope { // Scope
             Rectangle {
                 id: cheatsheetBackground
                 anchors.centerIn: parent
-                color: Appearance.colors.colLayer0
+                color: Appearance.customColors.custColCheatsheetBG
                 border.width: 1
-                border.color: Appearance.colors.colLayer0Border
+                border.color: Appearance.customColors.custColCheatsheetBorder
                 radius: Appearance.rounding.windowRounding
                 property real padding: 20
                 implicitWidth: cheatsheetColumnLayout.implicitWidth + padding * 2
