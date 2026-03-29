@@ -133,6 +133,10 @@ Singleton {
         property color custColVertBarBG: Qt.rgba(0.1, 0.1, 0.1, 0.7)
         property color custColVertBarBorder: Qt.rgba(0.1, 0.1, 0.1, 0.5)
 
+        // WindowDialog colors
+        property color custColWindowDialogBG: "#000000d9"
+        property color custColWindowDialogBorder: "#000000a4"
+
     }
 
     colors: QtObject {
